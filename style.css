@@ -20,6 +20,7 @@ body {
     background: linear-gradient(#b7d6c7, transparent) #ffe2d1;
     transition: background-color 1s linear;
     overflow: hidden;
+    display: none;
 }
 
 .mediodia {
@@ -113,6 +114,17 @@ body {
     font-weight: 700;
     z-index: 10;
     user-select: none;
+}
+
+
+#startButton {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0px 2px 6px #000000b3;
+    color: #5a736a;
+    font-family: Verdana, sans-serif;
+    font-weight: 700;
 }
 
 @keyframes animarDino {

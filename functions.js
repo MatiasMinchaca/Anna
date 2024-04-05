@@ -288,3 +288,28 @@ function RestartGame() {
     gameVel = INITIAL_VELOCITY; // Restablece la velocidad del juego a su valor inicial
     // Ajusta cualquier otra cosa que necesite ser reiniciada para devolver el juego al principio
 }
+
+
+document.getElementById('startButton').addEventListener('click', RestartGame);
+
+// Función para iniciar el juego
+function RestartGame() {
+    contenedor.style.display = "block";
+    document.getElementById('startButton').style.display = "none";
+    parado = false;
+    gameOver.style.display = "none"; 
+    gameRestartButton.style.display = "none"; 
+    score = 0;
+    textoScore.innerText = score;
+    tiempoHastaObstaculo = 2; 
+
+    sueloX = 0;
+    velEscenario = VELOCITY_FACTOR;
+    tiempoHastaNube = 0.5;
+    nubes.forEach(nube => nube.parentNode.removeChild(nube)); 
+    nubes = []; // Vacía el array de nubes
+    obstaculos.forEach(obstaculo => obstaculo.parentNode.removeChild(obstaculo));
+    obstaculos = []; 
+    gameVel = INITIAL_VELOCITY; 
+    
+}
